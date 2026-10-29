@@ -1,0 +1,10 @@
+title: Filtro de Kalman em 2D
+theme: minima
+lang: pt-BR
+markdown: kramdown
+kramdown:
+  math_engine: null
+exclude:
+  - script_kalman.py
+  - README.md
+  - LICENSE
