@@ -20,8 +20,8 @@ Guia passo a passo do Filtro de Kalman, com exemplo numérico e código Python.
 
 ## Resumo do ciclo
 
-**Previsão:** $\hat{x}_k^- = F\hat{x}_{k-1}$ e $P_k^- = FP_{k-1}F^T + Q$
+**Previsão:** $$\hat{x}_k^- = F\hat{x}_{k-1}$$ e $$P_k^- = FP_{k-1}F^T + Q$$
 
-**Atualização:** $K_k = P_k^-H^T(HP_k^-H^T+R)^{-1}$, $\hat{x}_k = \hat{x}_k^- + K_k(z_k - H\hat{x}_k^-)$ e $P_k = (I-K_kH)P_k^-$
+**Atualização:** $$K_k = P_k^-H^T(HP_k^-H^T+R)^{-1}$$, $$\hat{x}_k = \hat{x}_k^- + K_k(z_k - H\hat{x}_k^-)$$ e $$P_k = (I-K_kH)P_k^-$$
 
 [Licença MIT](https://github.com/antoniomtramos/kalman_filter/blob/main/LICENSE)
