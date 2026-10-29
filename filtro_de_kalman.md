@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: math
 title: Filtro de Kalman (Algoritmo Padrão)
 permalink: /filtro_de_kalman.html
 ---

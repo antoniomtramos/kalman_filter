@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: math
 title: Filtro de Kalman em 2D
 permalink: /filtro_de_kalman_2d.html
 ---
