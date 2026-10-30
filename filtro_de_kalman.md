@@ -99,5 +99,7 @@ $$
 
 ---
 
+Veja um exemplo numérico completo em [Filtro de Kalman em 1D]({{ '/filtro_de_kalman_1d.html' | relative_url }}).
+
 ## O Ciclo Contínuo
 Após concluir o **Passo 5**, os valores atualizados ($$\hat{x}_k$$ e $$P_k$$) tornam-se a base ($$\hat{x}_{k-1}$$ e $$P_{k-1}$$) para o próximo ciclo de tempo ($$k+1$$).

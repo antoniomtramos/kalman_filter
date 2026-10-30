@@ -10,6 +10,7 @@ Guia passo a passo do Filtro de Kalman, com exemplo numérico e código Python.
 ## Teoria
 
 - [Algoritmo padrão (5 passos)]({{ '/filtro_de_kalman.html' | relative_url }})
+- [Exemplo em uma dimensão (1D)]({{ '/filtro_de_kalman_1d.html' | relative_url }})
 - [Exemplo em duas dimensões (2D)]({{ '/filtro_de_kalman_2d.html' | relative_url }})
 
 ## Código
