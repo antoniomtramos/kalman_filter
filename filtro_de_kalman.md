@@ -12,7 +12,7 @@ Abaixo está o guia passo a passo generalizado com todas as fórmulas matemátic
 
 ---
 
-## 0. Glossário de Símbolos
+## Glossário de Símbolos
 
 * $$\hat{x}_{k-1}$$: Vetor de estado estimado no instante anterior ($$k-1$$).
 * $$P_{k-1}$$: Matriz de covariância do erro (incerteza) no instante anterior.
@@ -29,6 +29,18 @@ Abaixo está o guia passo a passo generalizado com todas as fórmulas matemátic
 ## Fase 1: Previsão (Time Update)
 Nesta fase, o sistema projeta o estado futuro e a incerteza com base puramente no modelo físico, sem consultar os sensores ainda.
 
+<details markdown="1">
+<summary>📖 Glossário de símbolos desta fase</summary>
+
+* $$\hat{x}_{k-1}$$: Vetor de estado estimado no instante anterior ($$k-1$$).
+* $$P_{k-1}$$: Matriz de covariância do erro (incerteza) no instante anterior.
+* $$F$$: Matriz de transição de estado (modelo físico do sistema).
+* $$Q$$: Matriz de covariância do ruído do processo (imperfeições do modelo).
+* $$\hat{x}_k^-$$: Estimativa do estado a priori (prevista, antes de usar a medição).
+* $$P_k^-$$: Covariância do erro a priori (incerteza prevista, antes de usar a medição).
+
+</details>
+
 ### Passo 1: Previsão do Estado a Priori ($$\hat{x}_k^-$$)
 Projeta a estimativa do estado para o instante atual utilizando o modelo físico do sistema.
 
@@ -43,10 +55,26 @@ $$
 P_k^- = F \cdot P_{k-1} \cdot F^T + Q
 $$
 
+
 ---
 
 ## Fase 2: Atualização / Correção (Measurement Update)
 Nesta fase, o sensor fornece uma nova leitura ($$z_k$$). O algoritmo compara a medição com a previsão e recalibra tanto o estado quanto a incerteza.
+
+<details markdown="1">
+<summary>📖 Glossário de símbolos desta fase</summary>
+
+* $$\hat{x}_k^-$$: Estimativa do estado a priori, vinda da Fase 1.
+* $$P_k^-$$: Covariância do erro a priori, vinda da Fase 1.
+* $$H$$: Matriz de observação (mapeia o espaço de estado para o espaço de medição do sensor).
+* $$R$$: Matriz de covariância do ruído da medição (imprecisão do sensor).
+* $$z_k$$: Vetor de medição obtido pelo sensor no instante atual ($$k$$).
+* $$K_k$$: Ganho de Kalman no instante atual.
+* $$\hat{x}_k$$: Estimativa do estado a posteriori (corrigida pela medição).
+* $$P_k$$: Covariância do erro a posteriori (incerteza após a correção).
+* $$I$$: Matriz identidade.
+
+</details>
 
 ### Passo 3: Cálculo do Ganho de Kalman ($$K_k$$)
 Calcula o fator de ponderação ideal que decide o equilíbrio entre a confiança na previsão do modelo e a confiança na medição do sensor.
@@ -70,6 +98,8 @@ P_k = (I - K_k \cdot H) \cdot P_k^-
 $$
 
 ---
+
+Veja um exemplo numérico completo em [Filtro de Kalman em 1D]({{ '/filtro_de_kalman_1d.html' | relative_url }}).
 
 ## O Ciclo Contínuo
 Após concluir o **Passo 5**, os valores atualizados ($$\hat{x}_k$$ e $$P_k$$) tornam-se a base ($$\hat{x}_{k-1}$$ e $$P_{k-1}$$) para o próximo ciclo de tempo ($$k+1$$).
