@@ -5,6 +5,8 @@ permalink: /filtro_de_kalman_2d.html
 ---
 
 
+[← Voltar ao índice]({{ '/' | relative_url }})
+
 # Filtro de Kalman para **duas dimensões (2D)** 
 
 como rastrear a posição e a velocidade de um drone ou veículo em um plano cartesiano ($$X$$ e $$Y$$) — exige o uso de **vetores e matrizes**.
