@@ -4,6 +4,8 @@ title: Filtro de Kalman em 1D
 permalink: /filtro_de_kalman_1d.html
 ---
 
+[← Voltar ao índice]({{ '/' | relative_url }})
+
 # Filtro de Kalman em uma dimensão (1D)
 
 Para estruturar o Filtro de Kalman exatamente como ele opera matematicamente, vamos utilizar um **modelo escalar (1D)**. Essa abordagem unidimensional (por exemplo, rastrear a posição de um objeto em uma linha reta) permite visualizar cada multiplicação, soma e inversão de forma cristalina, sem a complexidade de matrizes multidimensionais, mantendo toda a rigorosidade do algoritmo original.

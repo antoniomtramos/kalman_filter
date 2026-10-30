@@ -4,6 +4,8 @@ title: Filtro de Kalman (Algoritmo Padrão)
 permalink: /filtro_de_kalman.html
 ---
 
+[← Voltar ao índice]({{ '/' | relative_url }})
+
 # Filtro de Kalman (Algoritmo Padrão)
 
 O Filtro de Kalman é um estimador recursivo ideal para sistemas lineares afetados por ruído gaussiano. O algoritmo opera em um ciclo contínuo dividido em duas grandes fases: **Previsão (Time Update)** e **Atualização (Measurement Update)**.

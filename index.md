@@ -1,9 +1,9 @@
 ---
 layout: math
-title: Filtro de Kalman em 2D
+title: Início
 ---
 
-# Filtro de Kalman em 2D
+# Filtro de Kalman
 
 Guia passo a passo do Filtro de Kalman, com exemplo numérico e código Python.
 
